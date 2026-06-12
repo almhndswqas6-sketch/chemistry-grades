@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,53 +7,46 @@
 
 <style>
 body{
-font-family:Tahoma,sans-serif;
-background:#f2f2f2;
-text-align:center;
-padding:30px;
+    font-family: Arial,sans-serif;
+    background:#f2f2f2;
+    text-align:center;
+    padding:30px;
 }
-
 .container{
-max-width:600px;
-margin:auto;
-background:white;
-padding:30px;
-border-radius:15px;
-box-shadow:0 0 15px rgba(0,0,0,.2);
+    max-width:600px;
+    margin:auto;
+    background:#fff;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 0 15px rgba(0,0,0,.1);
 }
-
 h1{
-color:green;
-font-size:50px;
+    color:green;
 }
-
 input{
-width:80%;
-padding:15px;
-font-size:24px;
-margin:20px 0;
+    width:90%;
+    padding:15px;
+    font-size:22px;
+    text-align:center;
 }
 button{
-background:green;
-color:white;
-border:none;
-padding:15px 40px;
-font-size:28px;
-cursor:pointer;
+    margin-top:15px;
+    padding:15px 30px;
+    font-size:22px;
+    background:green;
+    color:white;
+    border:none;
+    cursor:pointer;
 }
-
 #result{
-margin-top:30px;
-font-size:28px;
+    margin-top:25px;
+    font-size:22px;
 }
 </style>
-
 </head>
-
 <body>
 
 <div class="container">
-
 <h1>درجات الكيمياء</h1>
 
 <p>أدخل الكود الخاص بك</p>
@@ -66,28 +58,29 @@ font-size:28px;
 <button onclick="searchStudent()">
 عرض النتيجة
 </button>
-<div id="result"></div>
 
+<div id="result"></div>
 </div>
 
 <script>
+
 const students = {
 
 "K8X41P": {name:"نور صباح", mark:8},
 "T2M93Q": {name:"لمياء حسن احمد", mark:8},
 "R7A15Z": {name:"مريم احمد", mark:8},
-"M4K82N": {name:"نبا ربيع سالم", mark:4},
+"M4K82N": {name:"لينا ربيع سالم", mark:4},
 "G9T61Q": {name:"غصون طارق", mark:9},
 "L5Y73W": {name:"الاء ياسر", mark:6},
 "B2X94R": {name:"رسل محمود", mark:5},
-"J8N46P": {name:"موح محمود", mark:7},
+"J8N46P": {name:"موج محمود", mark:7},
 "Q3V27K": {name:"ايمان محمود علي", mark:5},
-"F6C81M": {name:"كفاح نذون", mark:7},
+"F6C81M": {name:"كفاح ندون", mark:7},
 "H7D52L": {name:"اسماء دريد", mark:8},
 "U9P14S": {name:"فاطمة علي", mark:8},
 "E4R68T": {name:"سدره سفيان ابراهيم", mark:8},
 "Z1W35Y": {name:"امنة محمد عيدان", mark:8},
-"W3L82R": {name:" مؤمن خالد", mark:7},
+"W3L82R": {name:"مؤمن خالد", mark:7},
 "A8K51P": {name:"اسامة عبد الستار احمد", mark:8},
 "N2R73M": {name:"عبد الله فتحي", mark:8},
 "C5T84Q": {name:"رمضان حسين عياد", mark:8},
@@ -107,35 +100,27 @@ const students = {
 "U6P18K": {name:"مدين عبد الله عبد الستار", mark:8},
 "Z9L42M": {name:"نمر عبد الله", mark:3},
 "C7R85P": {name:"ايهم عبد الجبار احمد", mark:10},
-"J3T64N": {name:"ليث محمود ادريس", mark:0}
+"J3T64N": {name:"ليث محمود ادريس", mark:0},
 "H9D52K": {name:"حذيفة سالم غانم", mark:0},
 "R7Z84T": {name:"رزان تكليف", mark:0},
 "A5J31S": {name:"احمد جاسم صالح", mark:0},
 "E2M67Q": {name:"ايهم محمد", mark:0}
+
 };
 
 function searchStudent(){
 
-let code =
-document.getElementById("code")
-.value
-.trim()
-.toUpperCase();
+let code = document.getElementById("code").value.trim().toUpperCase();
 
-let result =
-document.getElementById("result");
+let result = document.getElementById("result");
 
 if(students[code]){
-
-result.innerHTML =
-"<h2>" + students[code].name + "</h2>" +
-"<p>درجة الكيمياء: " + students[code].mark + "</p>";
-
+    result.innerHTML =
+    "<h2>" + students[code].name + "</h2>" +
+    "<p>درجة الكيمياء: " + students[code].mark + "</p>";
 }else{
-
-result.innerHTML =
-"<span style='color:red'>الكود غير صحيح</span>";
-
+    result.innerHTML =
+    "<span style='color:red'>الكود غير صحيح</span>";
 }
 
 }
