@@ -66,50 +66,23 @@ button{
 
 const students = {
 
-"K8X41P": {name:"نور صباح", mark:8},
-"T2M93Q": {name:"لمياء حسن احمد", mark:8},
-"R7A15Z": {name:"مريم احمد", mark:8},
-"M4K82N": {name:"نبأ ربيع سالم", mark:4},
-"G9T61Q": {name:"غصون طارق", mark:9},
-"L5Y73W": {name:"الاء ياسر", mark:6},
-"B2X94R": {name:"رسل محمود", mark:5},
-"J8N46P": {name:"موج محمود", mark:7},
-"Q3V27K": {name:"ايمان محمود علي", mark:5},
-"F6C81M": {name:"كفاح ندون", mark:7},
-"H7D52L": {name:"اسماء دريد", mark:8},
-"U9P14S": {name:"فاطمة علي", mark:8},
-"E4R68T": {name:"سدره سفيان ابراهيم", mark:8},
-"Z1W35Y": {name:"امنة محمد عيدان", mark:8},
-"W3L82R": {name:"مؤمن خالد", mark:7},
-"A8K51P": {name:"اسامة عبد الستار احمد", mark:8},
-"N2R73M": {name:"عبد الله فتحي", mark:8},
-"C5T84Q": {name:"رمضان حسين عياد", mark:8},
-"D7Y26L": {name:"عبد الرحمن عبد الكريم صاع", mark:6},
-"V4P68N": {name:"عبد الله محمد عبد الجبار", mark:6},
-"X9M15K": {name:"احمد صالح حسن", mark:7},
-"S6Q47T": {name:"وسام حسن صالح", mark:6},
-"Y8N29P": {name:"محمد احمد غضبان", mark:7},
-"K4D71M": {name:"رضا حميد علي", mark:6},
-"P7R53L": {name:"اشرف عمار", mark:6},
-"F2V86Q": {name:"احمد بسام عبد الله", mark:8},
-"T8W34N": {name:"محمد بسام عبد الله", mark:7},
-"R5K92P": {name:"ادم عبد الحليم", mark:8},
-"M1X67L": {name:"مراد يوسف جلال", mark:9},
-"B8Q25T": {name:"محمد عكيل", mark:8},
-"H4N73R": {name:"ايوب خالد محمود", mark:10},
-"U6P18K": {name:"مدين عبد الله عبد الستار", mark:8},
-"Z9L42M": {name:"نمر عبد الله", mark:3},
-"C7R85P": {name:"ايهم عبد الجبار احمد", mark:10},
-"J3T64N": {name:"ليث محمود ادريس", mark:0},
-"H9D52K": {name:"حذيفة سالم غانم", mark:0},
-"R7Z84T": {name:"روان تكليف", mark:0},
-"A5J31S": {name:"احمد جاسم صالح", mark:0},
-"E2M67Q": {name:"ايهم محمد", mark:0},
- "Q5N74M": {name:"محمود غانم", mark:0},
-"M7H28Q": {name:"مها وضاح", mark:0},
-"R6W41K": {name:"روعه محمد فتحي", mark:0},
-
-};
+""K8X41P": {name:"نور صباح", daily1:8, daily2:10},
+"T2M93Q": {name:"لمياء حسن احمد", daily1:8, daily2:7},
+"R7A15Z": {name:"مريم احمد", daily1:8, daily2:9},
+"M4K82N": {name:"لينا ربيع سالم", daily1:4, daily2:4},
+"G9T61Q": {name:"غصون طارق", daily1:9, daily2:"م"},
+"L5Y73W": {name:"الاء ياسر", daily1:6, daily2:10},
+"B2X94R": {name:"رسل محمود", daily1:5, daily2:10},
+"J8N46P": {name:"موج محمود", daily1:7, daily2:9},
+"Q3V27K": {name:"ايمان محمود علي", daily1:5, daily2:9},
+"F6C81M": {name:"كفاح ندون", daily1:7, daily2:8},
+"H7D52L": {name:"اسماء دريد", daily1:8, daily2:10},
+"U9P14S": {name:"فاطمة علي", daily1:8, daily2:7},
+"E4R68T": {name:"سدره سفيان ابراهيم", daily1:8, daily2:10},
+"Z1W35Y": {name:"امنة محمد عيدان", daily1:8, daily2:10},
+"R7Z84T": {name:"روان تكليف", daily1:0, daily2:8},
+"M7H28Q": {name:"مها وضاح", daily1:0, daily2:9},
+"R6W41K": {name:"روعه محمد فتحي", daily1:0, daily2:8},
 
 function searchStudent(){
 
@@ -120,7 +93,8 @@ let result = document.getElementById("result");
 if(students[code]){
     result.innerHTML =
     "<h2>" + students[code].name + "</h2>" +
-    "<p>درجة الكيمياء: " + students[code].mark + "</p>";
+    "<p>اليومي الأول: " + students[code].daily1 + "</p>" +
+    "<p>اليومي الثاني: " + students[code].daily2 + "</p>";
 }else{
     result.innerHTML =
     "<span style='color:red'>الكود غير صحيح</span>";
