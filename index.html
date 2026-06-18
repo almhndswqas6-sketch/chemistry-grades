@@ -118,8 +118,10 @@ let result = document.getElementById("result");
 if(students[code]){
     result.innerHTML =
     "<h2>" + students[code].name + "</h2>" +
-    "<p>اليومي الأول: " + students[code].daily1 + "</p>" +
-    "<p>اليومي الثاني: " + students[code].daily2 + "</p>";
+    "<p>الحرارة النوعية: " + students[code].heat + "</p>" +
+    "<p>الإنثالبي الأول: " + students[code].enthalpy1 + "</p>" +
+    "<p>المسعر: " + students[code].calorimeter + "</p>" +
+    "<p>الإنثالبي الثاني: " + students[code].enthalpy2 + "</p>";
 }else{
     result.innerHTML =
     "<span style='color:red'>الكود غير صحيح</span>";
